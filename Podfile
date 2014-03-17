@@ -1,0 +1,7 @@
+platform :ios, '7.0'
+pod 'SVProgressHUD', '~> 1.0'
+pod 'UIActionSheet+Blocks', '~> 0.8'
+pod 'KINWebBrowser', '~> 0.2'
+pod 'AFNetworking', '~> 2.2'
+pod 'hpple', '~> 0.2'
+pod 'MWPhotoBrowser', '~> 1.4'
