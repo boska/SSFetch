@@ -4,40 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
-            <objects>
-                <viewController id="vXZ-lx-hvc" customClass="SSViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuu-IN-ykU">
-                                <rect key="frame" x="20" y="90" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="load album list">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="getAlbumlist:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0bz-lg-mK7"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="L71-No-YvQ"/>
-                    <connections>
-                        <segue destination="cmb-wI-EXF" kind="push" identifier="albumlist" id="dOB-gn-Y0d"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="538" y="-246"/>
-        </scene>
         <!--Game List View Controller - Games-->
         <scene sceneID="otW-eG-O9P">
             <objects>
@@ -70,7 +36,13 @@
                             <outlet property="delegate" destination="Y5l-4Y-SI0" id="l9q-AC-zKd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Games" id="lht-VV-fGn"/>
+                    <navigationItem key="navigationItem" title="Games" id="lht-VV-fGn">
+                        <barButtonItem key="rightBarButtonItem" title="About" style="plain" id="w9T-BN-XLc">
+                            <connections>
+                                <segue destination="6li-f3-YMV" kind="push" id="HEb-Is-CK0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="cmb-wI-EXF" kind="push" identifier="albumlist" id="2pa-Y7-5Nr"/>
                     </connections>
@@ -78,6 +50,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5P-pY-cLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-283" y="-764"/>
+        </scene>
+        <!--View Controller - About-->
+        <scene sceneID="20v-05-VFY">
+            <objects>
+                <viewController id="6li-f3-YMV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AXj-Zy-RVK"/>
+                        <viewControllerLayoutGuide type="bottom" id="c6k-7M-JIk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bud-tE-loD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="Er5-UK-d9X">
+                                <rect key="frame" x="110" y="111" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SSFetch 1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohn-re-Ulw">
+                                <rect key="frame" x="113" y="238" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lga-Dj-LF9">
+                                <rect key="frame" x="40" y="321" width="240" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">本 App 僅提供瀏覽賽事照片之界面
+一切照片內容之版權為運動筆記網站所有
+
+mr.boska@gmail.com
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="yk8-xt-xcl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ga-Tf-qjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="-374"/>
         </scene>
         <!--Album List Table View Controller-->
         <scene sceneID="wa5-Ge-fAO">
@@ -111,7 +128,7 @@
         <!--Navigation Controller-->
         <scene sceneID="x5J-8B-UUi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7lk-YR-XwM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7lk-YR-XwM" customClass="CRNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="exA-OD-HiZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -127,12 +144,13 @@
             <point key="canvasLocation" x="-750" y="-764"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iTunesArtwork" width="512" height="512"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="2pa-Y7-5Nr"/>
-    </inferredMetricsTieBreakers>
 </document>

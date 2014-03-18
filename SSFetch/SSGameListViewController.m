@@ -7,8 +7,8 @@
 //
 
 #import "SSGameListViewController.h"
-#import "SSViewController.h"
 #import "SSAlbumListTableViewController.h"
+#import <UIColor+HexString.h>
 @interface SSGameListViewController ()
 @property (nonatomic, strong) NSMutableArray *games;
 @property (nonatomic, strong) NSMutableArray *gamesId;
@@ -27,6 +27,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithHexString:@"097EC6"]];
   TFHpple *doc = [[TFHpple alloc] initWithHTMLData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.sportsnote.com.tw/running/album_list.aspx"]]];
   self.games = [NSMutableArray arrayWithArray:[doc searchWithXPathQuery:@"//div[@class='album_new']/a/b"]];
   self.gamesId = [NSMutableArray arrayWithArray:[doc searchWithXPathQuery:@"//div[@class='album_new']/a"]];

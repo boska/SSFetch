@@ -18,6 +18,7 @@ PODS:
   - AFNetworking/UIKit (2.2.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - CRNavigationController (0.0.1)
   - DACircularProgress (2.2.0)
   - hpple (0.2.0)
   - KINWebBrowser (0.2.3)
@@ -33,17 +34,21 @@ PODS:
   - SDWebImage/Core (3.5.4)
   - SVProgressHUD (1.0)
   - UIActionSheet+Blocks (0.8.1)
+  - UIColor-HexString (1.0.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.2)
+  - CRNavigationController (~> 0.0)
   - hpple (~> 0.2)
   - KINWebBrowser (~> 0.2)
   - MWPhotoBrowser (~> 1.4)
   - SVProgressHUD (~> 1.0)
   - UIActionSheet+Blocks (~> 0.8)
+  - UIColor-HexString (~> 1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 0121f4b69be3fa58d1ab317866e036e12ac9651d
+  CRNavigationController: a28d3a46893da80b3072fa7775b9fee1fb0e2c03
   DACircularProgress: 659d6fd11b5fc099c13ba9350239d9dca324916a
   hpple: dde62f905f482bbec50186280d1a1be2c881241b
   KINWebBrowser: 79452b9df420ca2fe962b9a7bf0ac1305fb4dc77
@@ -53,5 +58,6 @@ SPEC CHECKSUMS:
   SDWebImage: 1a62010700adbba823b621fc217906739dbf6aa5
   SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
   UIActionSheet+Blocks: e95422625426ae57ab83193f1523c6d1e4d5fad8
+  UIColor-HexString: 8a3f512f71b6d94a2cf6bdeabcad2f3532f31b5a
 
 COCOAPODS: 0.29.0

@@ -1,4 +1,6 @@
 platform :ios, '7.0'
+pod 'UIColor-HexString', '~> 1.0'
+pod 'CRNavigationController', '~> 0.0'
 pod 'SVProgressHUD', '~> 1.0'
 pod 'UIActionSheet+Blocks', '~> 0.8'
 pod 'KINWebBrowser', '~> 0.2'

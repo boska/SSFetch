@@ -16,7 +16,6 @@
 		8D8D711518D69FBA00D74DB6 /* SSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D711418D69FBA00D74DB6 /* SSAppDelegate.m */; };
 		8D8D711818D69FBA00D74DB6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D711618D69FBA00D74DB6 /* Main_iPhone.storyboard */; };
 		8D8D711B18D69FBA00D74DB6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D711918D69FBA00D74DB6 /* Main_iPad.storyboard */; };
-		8D8D711E18D69FBA00D74DB6 /* SSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D711D18D69FBA00D74DB6 /* SSViewController.m */; };
 		8D8D712018D69FBA00D74DB6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D711F18D69FBA00D74DB6 /* Images.xcassets */; };
 		8D8D712718D69FBA00D74DB6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8D712618D69FBA00D74DB6 /* XCTest.framework */; };
 		8D8D712818D69FBA00D74DB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8D710418D69FBA00D74DB6 /* Foundation.framework */; };
@@ -51,8 +50,6 @@
 		8D8D711418D69FBA00D74DB6 /* SSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSAppDelegate.m; sourceTree = "<group>"; };
 		8D8D711718D69FBA00D74DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		8D8D711A18D69FBA00D74DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		8D8D711C18D69FBA00D74DB6 /* SSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSViewController.h; sourceTree = "<group>"; };
-		8D8D711D18D69FBA00D74DB6 /* SSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSViewController.m; sourceTree = "<group>"; };
 		8D8D711F18D69FBA00D74DB6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8D8D712518D69FBA00D74DB6 /* SSFetchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSFetchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8D712618D69FBA00D74DB6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -130,8 +127,6 @@
 				8D8D711418D69FBA00D74DB6 /* SSAppDelegate.m */,
 				8D8D711618D69FBA00D74DB6 /* Main_iPhone.storyboard */,
 				8D8D711918D69FBA00D74DB6 /* Main_iPad.storyboard */,
-				8D8D711C18D69FBA00D74DB6 /* SSViewController.h */,
-				8D8D711D18D69FBA00D74DB6 /* SSViewController.m */,
 				8DA6CCE218D6A590003B0308 /* SSAlbumListTableViewController.h */,
 				8DA6CCE318D6A590003B0308 /* SSAlbumListTableViewController.m */,
 				8DB8F1E718D6F46900BB525E /* SSGameListViewController.h */,
@@ -308,7 +303,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D8D711E18D69FBA00D74DB6 /* SSViewController.m in Sources */,
 				8D8D711518D69FBA00D74DB6 /* SSAppDelegate.m in Sources */,
 				8DA6CCE418D6A590003B0308 /* SSAlbumListTableViewController.m in Sources */,
 				8D8D711118D69FBA00D74DB6 /* main.m in Sources */,
@@ -449,10 +443,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SSFetch/SSFetch-Prefix.pch";
 				INFOPLIST_FILE = "SSFetch/SSFetch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -464,10 +462,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SSFetch/SSFetch-Prefix.pch";
 				INFOPLIST_FILE = "SSFetch/SSFetch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

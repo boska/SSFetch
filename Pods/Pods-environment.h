@@ -48,6 +48,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 2
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 1
 
+// CRNavigationController
+#define COCOAPODS_POD_AVAILABLE_CRNavigationController
+#define COCOAPODS_VERSION_MAJOR_CRNavigationController 0
+#define COCOAPODS_VERSION_MINOR_CRNavigationController 0
+#define COCOAPODS_VERSION_PATCH_CRNavigationController 1
+
 // DACircularProgress
 #define COCOAPODS_POD_AVAILABLE_DACircularProgress
 #define COCOAPODS_VERSION_MAJOR_DACircularProgress 2
@@ -101,6 +107,12 @@
 #define COCOAPODS_VERSION_MAJOR_UIActionSheet_Blocks 0
 #define COCOAPODS_VERSION_MINOR_UIActionSheet_Blocks 8
 #define COCOAPODS_VERSION_PATCH_UIActionSheet_Blocks 1
+
+// UIColor-HexString
+#define COCOAPODS_POD_AVAILABLE_UIColor_HexString
+#define COCOAPODS_VERSION_MAJOR_UIColor_HexString 1
+#define COCOAPODS_VERSION_MINOR_UIColor_HexString 0
+#define COCOAPODS_VERSION_PATCH_UIColor_HexString 1
 
 // hpple
 #define COCOAPODS_POD_AVAILABLE_hpple

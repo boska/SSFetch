@@ -97,7 +97,9 @@
   //http://www.sportsnote.com.tw/running/album.aspx?id=5186224c-1b26-40eb-bd32-23c085b301b6&a=7718b5cb-ea55-4cef-934a-1766973c6541
 
   NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.sportsnote.com.tw/running/%@&a=%@", self.gameUrl, attribute[@"value"]]];
-  UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, 320, 568 - 64)];
+  CGRect r = self.view.frame;
+  r.origin.y = self.navigationController.navigationBar.frame.size.height+20;
+  UIWebView *webView = [[UIWebView alloc] initWithFrame:r];
   webView.delegate = self;
   webView.hidden = NO;
   [self.navigationController.view addSubview:webView];
@@ -105,7 +107,7 @@
   webView.scalesPageToFit = YES;
   [webView loadRequest:request];
   self.webView = webView;
-  [SVProgressHUD showWithStatus:@"Expanding Album..." maskType:SVProgressHUDMaskTypeClear];
+  [SVProgressHUD showWithStatus:@"Expanding Album\nIt will takes time..." maskType:SVProgressHUDMaskTypeGradient];
   // [webView stringByEvaluatingJavaScriptFromString:@"loadMore();loadMore();loadMore();loadMore();loadMore();loadMore();loadMore();loadMore();"];
   //[self.navigationController.view addSubview:webView];
 }
